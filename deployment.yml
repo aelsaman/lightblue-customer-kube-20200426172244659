@@ -1,4 +1,4 @@
-apiVersion: app/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customer-lightblue-deployment
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: customer
-          image: "us.icr.io/cldstd01-ns/customer:latest"
+          image: "us.icr.io/cldstd02-ns/customer:latest"
           imagePullPolicy: Always
           volumeMounts:
           - mountPath: /var/run/secrets/binding-refarch-cloudantdb
